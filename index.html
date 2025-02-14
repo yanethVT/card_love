@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Layout</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;  
+            color: #333;  /* Dark text  */
+            text-align: center;
+
+            background-image: url('images/image2.jpg'); 
+            background-size: cover; /*covers the entire screen */
+            background-position: center center;  /* Centers the image in the viewport */
+            background-attachment: fixed;  /* Keeps the background fixed while scrolling */
+            background-repeat: no-repeat;  /* Prevents the image from repeating */
+                }
+
+            /* Lightening the background by adding a semi-transparent white overlay */
+            body::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(255, 255, 255, 0.5);  /* Lighten the background with 50% white overlay */
+                z-index: -1;  /* Make sure the overlay is behind the content */
+            }
+
+        /* Styling the header */
+        header {
+            background-color: #007BFF;  /* Green background */
+            color: white;
+            padding: 20px 10px;  /* More compact padding */
+            max-width: 700px;  /* Set max-width for the header */
+            margin: 0 auto;  /* Center the header horizontally */
+            border-radius: 8px; /*round the corners*/
+        }
+
+        /* Content container to center everything */
+        .content {
+            max-width: 700px;  /* Reduced width to make it less stretched */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;  /* White background  */
+            border-radius: 8px;  /* Rounded corners for a smooth look */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/*shadow for depth */
+            text-align: left;  /* Align the text to the left */
+
+        }
+/* Main content container */
+        .content 
+        h2 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: #444;  /* Slightly lighter color for the concept */
+        }
+/* Styling the examples container */
+        .examples
+        {
+            background-color: #f0f0f0;  /* Light gray  */
+            padding: 15px;
+            max-width: 500px; 
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        /* Set up flexbox for text and image */
+        .examples-text {
+            display: flex;  /* Flexbox layout */
+            justify-content: space-between;  /* Space between the text and the image */
+            align-items: center;  /* Align items vertically */
+        }
+
+        .examples-text p {
+            font-size: 1em;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .examples-text img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .advice {
+            background-color: #007BFF;  /* Yellow background for emphasis */
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Let's remember</h1> <!-- Title for the Header Section -->
+</header>
+
+<div class="content">
+    <h2> What is Love?</h2>
+
+    <div class="examples-text">
+        <div class="examples">
+            <p>
+                "Let's be grateful, for we can see the love of God around us—in everything, in our friends, our family, and even our acquaintances."
+
+            </p>
+        </div>
+        <!-- Image placed next to the examples -->
+        <img src="images/image1.jpg" alt="Web Design Example Image">
+    </div>
+
+    <div class="advice">
+        <p>Advice: Do you have an advice to me?</p>
+    </div>
+
+</div>
+
+<footer>
+    <h1>Footer Section</h1> <!-- Title for the Footer Section -->
+    This is the footer and this is the purpose: The footer provides additional information such as copyright or credits, placed at the bottom of the page.
+</footer>
+
+</body>
+</html>
